@@ -25,6 +25,10 @@ h1 {
     font-size: 2.5rem;
     font-family: 'HS-Regular';
 }
+a {
+    color: white;
+    text-decoration: none;
+}
 section { 
     max-width: 1000px;
     box-sizing: border-box;
@@ -172,42 +176,48 @@ section {
     transition: all 0.2s;
 }
 
-.section3-gallery>.gallery-board {
+.section3-gallery>.gallery-board-wrap {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section3-gallery .gallery-board {
     display: inline-block;
     width: 280px;
     height: 350px;
     background-color: lightgray;
     border-radius: 20px;
     text-align: center;
+    margin: 0 5px;
 }
-.section3-gallery>.gallery-board>h4 {
+.section3-gallery .gallery-board>h4 {
     font-weight: bold;
 }
-.section3-gallery>.gallery-board>.image-wrap {
+.section3-gallery .gallery-board>.image-wrap {
     width: 250px;
     height: 250px;
     margin: 15px;
     overflow: hidden;
 }
-.section3-gallery>.gallery-board:hover .image{
+.section3-gallery .gallery-board:hover .image{
     transform: scale(1.1);
     transition: all 0.5s;
 }
 
 /* section3 이미지 넣는 공간 */
-.section3-gallery>.gallery-board:nth-child(2) .image {
+.section3-gallery>.gallery-board-wrap .gallery-board:nth-child(2) .image {
     width: 250px;
     height: 250px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/Festival.jpg);
 }
-.section3-gallery>.gallery-board:nth-child(3) .image {
+.section3-gallery>.gallery-board-wrap .gallery-board:nth-child(3) .image {
     width: 250px;
     height: 250px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/Festival.jpg);
 }
-.section3-gallery>.gallery-board:nth-child(4) .image {
+.section3-gallery>.gallery-board-wrap .gallery-board:nth-child(1) .image {
     width: 250px;
     height: 250px;
     /*나중에 수정하기 위함*/
@@ -274,7 +284,7 @@ section {
     position: fixed;
     bottom: 10px; right: 10px;
     width: 80px; height: 80px;
-    background-color: #2D3192;
+    background-color: #2D3192cc;
     border-radius: 50%;
     box-sizing: border-box;
     padding-top: 30px;
@@ -282,7 +292,7 @@ section {
     transition: all 0.3s;
 }
 .top-button:hover {
-    background-color: #EB5D99;
+    background-color: #EB5D99cc;
     transition: all 0.3s;
 }
 .top-button>a {
@@ -290,4 +300,44 @@ section {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* nav 모바일 버튼*/
+.nav>.mobile-button {
+    display: none;
+    background-image: url(../img/bars-solid.svg);
+    width: 35px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* 미디어쿼리 - nav*/
+@media screen and (max-width:767px) {
+    .header {background-color: #EB5D99cc;}
+    .nav>.mobile-button {
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .nav>.nav-menu{
+        flex-direction: column;
+        height: 60px;
+        transition: all 0.5s;
+    }
+    .nav>.nav-menu>li{
+        display: none;
+    }
+    .nav>.mobile-button:hover+.nav-menu,
+    .nav>.nav-menu:hover
+    {
+        height: 100vh;
+        transition: all 0.5s;
+    }
+    .nav>.mobile-button:hover+.nav-menu>li,
+    .nav>.nav-menu:hover>li
+    {
+        display: inline-block;
+    }
 }
