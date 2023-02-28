@@ -39,7 +39,7 @@ section {
 /* header의 nav */
 .header { 
     position: fixed; 
-    background-color: #2D3192cc;
+    background : linear-gradient(#2D3192cc 40%,#EB5D99cc);
     width: 100%;
     color: white;
     z-index: 100;

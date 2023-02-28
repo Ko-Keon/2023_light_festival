@@ -44,5 +44,5 @@
 .qna-button>input[type="checkbox"]:checked~input[type="submit"] {
     background-color: #2D3192;
     color: white;
-    border: white 2px solid;
+    border: white 1px solid;
 }
