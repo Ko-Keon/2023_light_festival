@@ -1,5 +1,4 @@
-/*태그 이름을 통한 css 디자인*/
-/*사용할 폰트*/
+/* 사용할 폰트 */
 @font-face {
     font-family: 'PyeongChangPeace-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
@@ -18,34 +17,37 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+
+/* 태그이름을 통한 css디자인 */
 h1 {
-    font-size: 2rem;
-    font-family: "HS-Regular";
+    font-size: 2.5rem;
+    font-family: 'HS-Regular';
 }
-section {
+section { 
     max-width: 1000px;
     box-sizing: border-box;
     margin: auto;
 }
 
-/*클래스 이름을 통한 css 디자인*/
-/*header의 nav*/
-.header {
-    position: fixed;
-    /*background-color: #2d3192cc;*/
-    background: linear-gradient(black,#2d3192cc);
+/* 클래스 이름을 통한 css디자인 */
+/* header의 nav */
+.header { 
+    position: fixed; 
+    background-color: #2D3192cc;
     width: 100%;
     color: white;
     z-index: 100;
 }
 .header>.nav {
-    max-width: 1000px;
+    max-width:1000px;
     box-sizing: border-box;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+    padding: 24px 20px;
 }
 .header>.nav>.nav-menu {
     display: flex;
@@ -55,110 +57,126 @@ section {
 .header>.nav>.nav-menu a {
     color: white;
     text-decoration: none;
-    font-family: HS-Regular;
+    font-family: 'TAEBAEKmilkyway';
     font-size: 1.2rem;
+    font-weight: bold;
 }
 .header>.nav>.nav-menu a::after {
     content: "";
     display: inline-block;
     width: 0; height: 4px;
-    background-color: #ffff08;
+    background-color: #FFFF08;
     position: absolute;
     bottom: 0;
-    margin-left: -73px;
+    margin-left: -74px;
 }
 .header>.nav>.nav-menu a:hover:after {
     width: 80px;
-    transition: all 0.55s;
+    transition: all 0.5s;
 }
+
 .header>.nav>.nav-menu a:hover {
-    color: #ffff08;
+    color: #FFFF08;
 }
-.header>.nav>.nav-title {
-    width: 180px;
+
+
+.header>.nav>a {
+    color: white;
+    text-decoration: none;
+}
+.header>.nav>a>.nav-title {
+    width: 150px;
     text-align: center;
     font-size: 1.5rem;
-    font-family: "PyeongChangPeace-Bold";
+    font-family: 'HS-Regular';
 }
 
 /*main*/
-/*섹션부분을 찾기 힘들 것 같다면 메인에 두어도 상관X*/
+/* 섹션부분을 찾기 힘들것같다면 메인에 두어도 상관없음 */
+.main { }
 
 /*section 단위로 접근*/
-/*section1*/
 .section1-wrap {
     width: 100%;
     min-height: 400px;
     height: 100vh;
-    background-image: url(../img/festival.jpg);
+    background-image: url(../img/Festival.jpg);
     background-size: cover;
     background-position: center;
 }
-.section1-wrap>.section1-title {
+
+.section1-wrap>.section1-title{
     color: white;
-    padding-top: 400px;
-    text-align: left;
-    padding: 400px 20px 0px 20px;
+    text-align: right;
+    padding: 250px 20px 0 20px;
+    text-shadow: 0 0 5px black;
+    font-weight: bold;
 }
-.section1-wrap>.section1-title>h1 {
+.section1-wrap>.section1-title>h1{
     font-size: 3rem;
 }
 .section1-wrap>.section1-title>h3 {
-    font-family: hs-regular;
+    font-family: 'TAEBAEKmilkyway';
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 10px 0;
 }
 
-/*section2 행사설명*/
+/* sention2 행사 설명*/
 .section2-intro {
     text-align: center;
     padding: 60px 0;
     line-height: 120%;
+
 }
-.section2-intro>.intro-title>h1 {
+.section2-intro>.intro-title,
+.section2-intro>.intro-title>h1
+{
     margin-bottom: 20px;
 }
 .section2-intro>.intro-title>h3 {
-    margin-bottom: 20px;
-    font-family: TAEBAEKmilkyway;
+    font-family: 'TAEBAEKmilkyway';
 }
+
+
 .section2-intro>.intro-descript>table {
     margin: auto;
     margin-top: 50px;
 }
-.intro-descript table tr td:first-child {
-    font-weight: bold;
-    color: #2d3192cc;
+.section2-intro>.intro-descript table tr td:first-child {
+    color: #2D3192;
     padding: 5px 10px;
-    border-right: #2d3192cc 2px solid;
+    border-right: #2D3192 2px solid;
+    font-weight: bold;
 }
-.intro-descript table tr td {
+.section2-intro>.intro-descript table tr td{
     padding: 5px 10px;
 }
 
-/*행사 이미지*/
+/* section3 행사 이미지 */
+.section3-wrap {}
 .section3-wrap>.section3-gallery>.gallery-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
 }
-.section3-wrap>.section3-gallery>.gallery-title>a {
-    background-color: #2d3192cc;
+.section3-gallery>.gallery-title>a {
+    background-color: #2D3192;
     color: white;
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 15px;
 }
-.section3-wrap>.section3-gallery>.gallery-title>a:hover {
-    background-color: #eb5d99;
-    transition: all 0.3s;
+.section3-gallery>.gallery-title>a:hover {
+    background-color: #EB5D99;
+    transition: all 0.2s;
 }
+
 .section3-gallery>.gallery-board {
     display: inline-block;
     width: 280px;
     height: 350px;
-    background-color: lightcyan;
+    background-color: lightgray;
     border-radius: 20px;
     text-align: center;
 }
@@ -171,22 +189,17 @@ section {
     margin: 15px;
     overflow: hidden;
 }
-.section3-gallery>.gallery-board:hover .image {
-    transform: scale(1.2);
+.section3-gallery>.gallery-board:hover .image{
+    transform: scale(1.1);
     transition: all 0.5s;
 }
-/*section3 이미지 넣는 공간*/
-.section3-gallery>.gallery-board:nth-child(2)>.image {
-    margin: 15px;
-}
+
+/* section3 이미지 넣는 공간 */
 .section3-gallery>.gallery-board:nth-child(2) .image {
     width: 250px;
     height: 250px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/Festival.jpg);
-}
-.section3-gallery>.gallery-board:nth-child(3)>.image {
-    margin: 15px;
 }
 .section3-gallery>.gallery-board:nth-child(3) .image {
     width: 250px;
@@ -194,80 +207,87 @@ section {
     /*나중에 수정하기 위함*/
     background-image: url(../img/Festival.jpg);
 }
-.section3-gallery>.gallery-board:nth-child(4)>.image {
-    margin: 15px;
-}
 .section3-gallery>.gallery-board:nth-child(4) .image {
     width: 250px;
     height: 250px;
+    /*나중에 수정하기 위함*/
     background-image: url(../img/Festival.jpg);
 }
 
-/*section4 행사 뉴스*/
+/*section4 행사뉴스*/
 .section4-news {
     padding: 60px 0;
-    height: 400px;
+    height: 350px;
 }
-.section4-news>table{
+.section4-news>table {
     width: 80%;
-    margin: auto; 
-    margin-top: 40px;
-}
-.section4-news>table tr td:first-child {
-    color: #2d3192cc;
-    font-weight: bolder;
-    padding-right: 50px;
-}
-.section4-news>table tr:hover td {
-    color: #eb5d99;
-}
-.section4-news>table tr td {
-    padding: 15px 0;
-    border-top: #2d3192cc solid 2px; 
-    border-bottom: #2d3192cc solid 2px;
+    margin: auto;
+    margin-top: 30px;
 }
 
-/*footer*/
-.footer {
-    background-color: rgb(211, 211, 211);
-    padding: 30px 0;
+.section4-news>table tr td:first-child {
+    color: #2D3192;
+    font-weight: bolder; 
+    padding-right: 50px;
+}
+.section4-news>table tr td a{
+    color: black;
+    text-decoration: none;
+}
+.section4-news>table tr:hover td,
+.section4-news>table tr:hover td a
+{
+    color: #EB5D99;
+}
+
+
+.section4-news>table tr td {
+    padding: 15px 0 ;
+    border-top: #2D3192 2px solid;
+    border-bottom: #2D3192 2px solid;
+}
+
+/* footer */
+.footer { 
+    background-color:rgb(241, 241, 241);
+    padding: 15px 0;
 }
 .footer>.footer-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 .footer>.footer-content>.footer-info>p {
     float: left;
-    padding-bottom: 10px;
     padding-right: 50px;
+    padding-bottom:10px ;
     color: gray;
     font-size: 0.8rem;
 }
-.footer>.footer-content>.footer-info>p:last-child{
+.footer>.footer-content>.footer-info>p:last-child {
     padding: 0;
     clear: both;
 }
 
-/*Top 버튼*/
+/* Top 버튼*/
 .top-button {
     position: fixed;
     bottom: 10px; right: 10px;
     width: 80px; height: 80px;
-    background-color: #2d3192cc;
+    background-color: #2D3192;
     border-radius: 50%;
     box-sizing: border-box;
-    padding-top: 30px ;
+    padding-top: 30px;
     text-align: center;
     transition: all 0.3s;
 }
 .top-button:hover {
-    background-color: #eb5d99;
+    background-color: #EB5D99;
     transition: all 0.3s;
 }
 .top-button>a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: bold;
 }
